@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Programming</title>
+</head>
+
+<h1>Programming introduction for TI-84 Plus and TI-84 Plus CE</h1>
+	<p><a href="Calc_God.html" title="Link">Home</a></p>
+
+<body>
+<p>Programming allows you to save massive amounts of time in the field by fronting a problem and spending extra time on it at an earlier time to automate it. The age old wisdom is: Why do a task that takes an hour when you can spend an hour automating it? Well Hopefully we won’t waste that much time, but I think we will gain some valuable experience and have a little fun along the way.</p>
+	<hr>
+<p>So I am going to give a brief run down on the basics of programming on the TI-84. I’ll go over the basics and then show you some resources to help you along your way.</p>
+<p>First I want to show you the official Ti-84 Coding Handbook. (found <a href= "https://education.ti.com/-/media/377A0772C3B04D83B83D2A4E51029D08" title="Link">here</a>) This is a great place to start but in my opinion it is a lot to take in and should only be read in short bursts, you may go crazy otherwise.</p>
+	<p>Lets start off with how to create a program on the TI-84.</p>
+	<p>(Make Note: I will be using a TI-84 Plus CE for this demonstration but all the commands will work in the exact same way on the TI-84 Plus)</p>
+<p>1. By clicking the ‘prgm’ key</p>
+	<img src="Capture 33.png" width="644" height="484" alt=""/>
+	<p>Use the arrow keys to select “New” and then click ‘enter’. You must now choose a name for your program. Some quirks about names on the TI-84, they can not be longer than 8 characters long and all your files have the same amount of importance as the other. Meaning that there are no folders and all your files are saved to your root directory. (This is unfortunate since we can’t hide supporting files without ruining our clean look)</p>
+	<p>We are going to create an app to do the Pythagorean theorem for us, so consider a name like, PYTHAG. Now we are in the editor, we are using TI-Basic which, is honestly kind of basic. There are three basic steps to most math programs. </p>
+	<hr>
+	<p>1. We must “prompt” values from the user. </p>
+	<p>Doing so in a way that explains everything in the program will help save time for the user and won’t risk them becoming upset because they don’t understand something</p>
+	<p>2. We must compute the provided values</p>
+	<p>We use the values from the user and do something to it. </p>
+	<p>3. We must display the results</p>
+	<p>We must return the computed values to the user in a way that makes sense.</p>
+	<hr>
+<p>Now I know this is a ton of abstract crap and you probably want to get to the fun part of actually making the program. Well that is coming up, but we must consider what the program will do and how it will do it before we get to programming. </p>
+	<p>1. How will the user input data? We need to have a way to input 3 pieces of data and keep track of each piece of data. The Pythagorean Theorem states; a^2+b^2=c^2. Knowing this, we need to have a and b to find c, and c to find b and finally b and c to find a. So we must prompt the user for these values.</p>
+	<p>But before we can prompt the user we must explain to the user what we are prompting them for. We can do so by using the “Disp” command, which is essentially a print command. </p>
+<p>To access the ‘Disp” command we must press ‘prgm’ and then go to the right using the arrows. We can now use the arrows to select “Disp” </p>
+<img src="Capture 35.png" width="644" height="484" alt=""/>
+	<p>To learn the syntax of a command you can click ‘+’ on it when you are in a selection menu like seen above. The + help menu will give you a brief overview of the syntax of the given command. </p>
+<p>After entering command into our editor we can make it display some text. Input “a^2+b^2=c^2”,”Put 0 for Unknowns”. To enter a “ you can press ‘alpha’ and then the ‘+’ button. To not have a carrot for the power you can click the button directly above the ‘log’ button to do so. And to switch to letter mode, you press  ‘2nd’ and then ‘alpha’. Pressing ‘alpha’ again will put you back in default mode. Using a comma acts as a line break. The comma can be found above the number 7 </p>
+<img src="Capture 36.png" width="644" height="484" alt=""/>
+<p>We can run the program to see if it looks correct by clicking ‘2nd’ then ‘quit’ (under ‘mode’), then ‘prgm’ and then select your program. Running what we entered above will display this.</p>
+<img src="Capture 37.png" width="644" height="484" alt=""/>
+	<p>We can return to editing our program by clicking ‘prgm’ then using the arrows to go to the right to the edit tab and then select the correct program.</p>
+<p>We can then prompt for the values by pressing ‘prgm’, and then go to the right with the arrows keys to select “Prompt”</p>
+<img src="Capture 34.png" width="644" height="484" alt=""/>
+<p>We can then prompt for vars A, B, and C by typing A,B,C</p>
+<img src="Capture 38.png" width="644" height="484" alt=""/>
+	<p>We have completed step one!</p>
+	<hr>
+	<p>2. We must do calculations but how will we know which ones to do? We can use if statements to check if there is a zero in any of our variables</p>
+	<p>An if statement in any language is a way to compare something against something else. In our case we will be checking if our variables have a zero. If and only if there is a zero in our case, then certain code will run. Or if it fails the condition, it will do the else statement if provided. Otherwise the program will go to the line after the if statement like nothing every happened. We should also check to see if our other variables have data, otherwise our program won’t work</p>
+	<p>We could write our first statement like this:</p>
+	<p>If A=0 and B/=0 and C/=0 <br> Then <br> (Some Condition)</p>
+<p>If and then are on the first tab under the ‘prgm’ button. The and operator is under the second tab under the ‘test’ (under ‘math’) button</p>
+<img src="Capture 40.png" width="644" height="484" alt=""/>
+<p>We now need to figure out the what math we need to do. Since this is pretty basic math I will skip the explanation but for more complex programs it is important to consider all cases and make sure your math is sound.</p>
+<img src="Capture 41.png" width="644" height="484" alt=""/>
+<p>We then must say “End” to finish our statement.</p>
+<img src="Capture 42.png" width="644" height="484" alt=""/>
+<p>We can repeat this step for when we don’t know B and C. It will look something like this:</p>
+<img src="Capture 43.png" width="644" height="484" alt=""/>
+	<hr>
+	<p>3. Now we are nearly done. We simply need to display our results. Press ‘prgm’ and get the “disp” command from the second I/O tab and then simply write D since all of our equations output to D.</p>
+	<p>Get back to the main screen and run the program and enjoy your hard work! Don’t forget to test your program. If you run into any issues go through your code line by line and think about every step the program is making.</p>
+	<p>If you would like to make your code more robust you could account for a case that says something when only one input is entered or if three inputs are entered. </p>
+	<hr>
+	<p>Well done on completing a brief tutorial on how to create a program on your TI-84. For Further reading check out the Official Documentation <a href="https://education.ti.com/-/media/377A0772C3B04D83B83D2A4E51029D08" title="Link">here</a>  or check out a forum like <a href="https://www.cemetech.net/" title="Link">Cemetech</a> for inspiration or help. </p>
+<style>
+	img {
+		width: 80%;
+		height: auto;
+		max-width:300px;
+  
+}
+	</style>
+</body>
+</html>
