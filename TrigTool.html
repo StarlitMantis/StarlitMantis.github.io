@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <title>TrigTool</title>
 </head>
+	<style>
+	img {
+		width: 80%;
+		height: auto;
+		max-width:300px;
+  
+}
+	</style>
 <h1>TrigTool</h1>
 	<p><a href="Calc_God.html" title="Link">Home</a></p>
 	<hr>
@@ -18,6 +26,24 @@
 	<hr>
 	<h3>App Instructions</h3>
 	<p>Visit the Github page <a href="https://github.com/StarlitMantis/TrigTools/blob/main/README.md">here</a> and read the necessary steps.</p>
+	<hr>
+	<h3>How it Works/How it was Made:</h3>	
+	<p>I will briefly touch on the process of creating some of the other apps in the Trigtool, but this story will mainly focus on the triangle calculator app. Most of the development time during the creation of the Trigtool was dedicated to triangle app. The triangle calculator had several problems that needed to be broken down and solved before I could begin working on the functionality.</p>
+	<h3>Why Programming on the Ti-84 Kinda Sucks:</h3>
+	<p>The first hurdle was data input and dealing with data. While the Ti-84 does support assembly programming I don’t have the time to learn how to do that so I wrote the app in Ti-Basic. Ti-Basic is really powerful for utilizing the built in functions of the calculator. However, there are two limiting factors: One, you can only have 27 variables at once. (A-Z and Theta) While this sounds like a lot of variables I quickly found out that it is not. Two, there is no way to create folders and hide supporting functions. With the way Ti-Basic works, to create functions you have to create another program and write the function in the program and then call that program in the original program. Originally when I created the Trigtool it was 33 documents and all of them were very visible to the end-user. While these factors were limiting, they were not impossible to overcome. </p>
+	<p>The last factor is the actual programming itself. I am going to insert a segment of code from the program right here:</p>
+	<img src="Assets/Articles/TrigTool/Capture 2.png" width="644" height="484" alt=""/>
+	<p>This segment of code checks to see if there are two solutions. The tricky bit is the end of the if functions and loops. Typically, when you program these things are indented so you can tell when one loop ends, and another begins. Without this indentation managing more than 2 or 3 functions becomes almost impossible. There are segments of code that are 5-6 if statements deep. To overcome this, I simply wrote the program on a whiteboard. (Pictured below)</p>
+	<img src="Assets/Articles/TrigTool/Whiteboard1.jpg" width="644" height="484" alt=""/><img src="Assets/Articles/TrigTool/Whiteboard2.jpg" width="644" height="484" alt=""/>
+	<p>The Ti-84 doesn’t have a debugger. So, I tested every single program I wrote with a debugger I made specifically for each program to make sure they were working as expected. Now there is a way where you can program on an app by Ti but it is so bad that it is actually more worthwhile to program directly on the Ti-84. I wrote so much that I can type at a sustained speed of 16 words a minute on the Ti-84. </p>
+	<h3>How the program works:</h3>
+	<p>The plight of every developer is writing repetitive code for no reason. The easiest way to write the Triangle calculated would be to code by hand each possible situation the triangle could be in and then every possible operation. You can have the same triangle written in three different ways. Visualized here:</p>
+	<img src="Assets/Articles/TrigTool/TriangleRotations.png" width="644" height="484" alt=""/>
+	<p>I have only included the angles on this diagram, but it shows what I am saying. Why write the whole program three times when we can rotate the variables into each position thus writing the program once. This helped save time writing out a lot of unnecessary code at the beginning of the project but also towards the end when I made little switchers for more specific operations. </p>
+	<p>The program takes in 6 inputs but three should be unknown. This would mean that the user could enter: 6,5,0,20,0,0. The zeros are the unknowns we are solving for. The program will then compare this input against the known relationships certain angles and sides have. If the numbers do not work for any of the known conditions, the program will rotate the values once and try again, and finally one more time until it finds the right conditions. Once the program has found out which relationship is present, the code will calculate all possible solutions using the law of sines and law of cosines. The program can handle no solution as well as two solution cases. After the values have been computed, the values are send back to the user in the same way they were entered. </p>
+	<h3>Final Thoughts:</h3>
+	<p>This program pushed my calculator and myself to the limit. After successfully creating the program utilizing 33 documents to maintain some level of order I tried to further optimize the program by getting it to work from one document. This is where the program is today and probably will stay. You can view the project on Github <a href="https://github.com/StarlitMantis/TrigTools/blob/main/README.md">here</a>, as well as my linkedin post <a href="https://www.linkedin.com/posts/emmadurso_project-students-activity-7014161314646278144-u9dN?utm_source=share&utm_medium=member_desktop">here</a>.</p>
+	<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7014161314004574208" height="575" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 <body>
 </body>
 </html>
